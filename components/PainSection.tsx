@@ -57,7 +57,7 @@ export default function PainSection() {
   const painIcons = [Ban, TrendingDown, Activity, Clock, Building2, Sparkles];
 
   return (
-    <section ref={sectionRef} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] to-[#0a0a0a]">
+    <section ref={sectionRef} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]">
       {/* Top divider */}
       <div ref={lineRef} className="divider-glow absolute top-0 left-0 right-0" />
 

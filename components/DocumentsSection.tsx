@@ -42,7 +42,7 @@ export default function DocumentsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="documents" className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] to-[#0a0a0a]">
+    <section ref={sectionRef} id="documents" className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]">
       <div className="divider-glow absolute top-0 left-0 right-0" />
 
       <div className="container mx-auto px-4 md:px-6">

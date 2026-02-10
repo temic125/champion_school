@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
+function AnimatedCounter({ target, suffix = '', duration = 2 }: { target: number; suffix?: string; duration?: number }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
@@ -23,7 +23,7 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
         const obj = { val: 0 };
         gsap.to(obj, {
           val: target,
-          duration: 2,
+          duration: duration,
           ease: 'power2.out',
           onUpdate: () => setCount(Math.floor(obj.val)),
         });
@@ -31,10 +31,10 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
     });
 
     return () => trigger.kill();
-  }, [target]);
+  }, [target, duration]);
 
   return (
-    <div ref={ref} className="text-5xl md:text-6xl lg:text-7xl font-black text-[#20B5C9] font-road-radio leading-none">
+    <div ref={ref} className="text-4xl md:text-5xl lg:text-6xl font-black text-[#20B5C9] font-road-radio leading-none">
       {count}{suffix}
     </div>
   );
@@ -69,14 +69,16 @@ export default function StatsSection() {
   }, []);
 
   const stats = [
-    { value: 6, suffix: '', label: 'лет на рынке' },
-    { value: 2500, suffix: '+', label: 'выпускников' },
-    { value: 15, suffix: '+', label: 'потоков' },
-    { value: 8, suffix: '', label: 'филиалов' },
+    { value: 6, suffix: '', label: 'лет на рынке', duration: 2 },
+    { value: 2500, suffix: '+', label: 'учеников', duration: 3.5 },
+    { value: 55, suffix: '+', label: 'потоков онлайн', duration: 2 },
+    { value: 160, suffix: '+', label: 'потоков офлайн', duration: 2.5 },
+    { value: 8, suffix: '', label: 'своих фитнес-клубов', duration: 2 },
+    { value: 1, suffix: '', label: 'оздоровительный центр', duration: 1.5 },
   ];
 
   return (
-    <section ref={sectionRef} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] to-[#0a0a0a] overflow-hidden">
+    <section ref={sectionRef} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] overflow-hidden">
       <div className="divider-glow absolute top-0 left-0 right-0" />
 
       {/* Marquee background text */}
@@ -96,11 +98,11 @@ export default function StatsSection() {
           В цифрах
         </h2>
 
-        <div ref={itemsRef} className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div ref={itemsRef} className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16 md:gap-12 lg:gap-16">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
-              <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-              <p className="text-white/30 font-gilroy text-sm mt-3 uppercase tracking-wider">{stat.label}</p>
+              <AnimatedCounter target={stat.value} suffix={stat.suffix} duration={stat.duration} />
+              <p className="text-white/30 font-gilroy text-xs md:text-sm mt-3 uppercase tracking-wider">{stat.label}</p>
             </div>
           ))}
         </div>

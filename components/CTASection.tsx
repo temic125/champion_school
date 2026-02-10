@@ -87,7 +87,7 @@ export default function CTASection({ openModal }: CTASectionProps) {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0a0a0a] overflow-hidden">
+    <section ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] overflow-hidden">
       {/* Background glow */}
       <div ref={glowRef} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-[#20B5C9]/8 blur-[200px] pointer-events-none" />
       

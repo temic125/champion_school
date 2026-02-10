@@ -46,7 +46,7 @@ const TrainingShowcaseSection = forwardRef<HTMLElement>((props, ref) => {
       (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
       else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
-    }} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0a0a0a]">
+    }} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]">
       {/* Subtle glow */}
       <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-[#fff100]/3 rounded-full blur-[200px] pointer-events-none" />
 

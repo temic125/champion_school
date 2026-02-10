@@ -131,8 +131,8 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ openModal }, re
               { value: '#1', label: t('industry') },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-lg md:text-xl font-black text-[#20B5C9] font-road-radio">{stat.value}</div>
-                <div className="text-xs md:text-sm text-white/40 font-gilroy mt-1 uppercase tracking-wider">{stat.label}</div>
+                <div className="text-2xl md:text-3xl font-black text-[#20B5C9] font-road-radio">{stat.value}</div>
+                <div className="text-sm md:text-base text-white/40 font-gilroy mt-1 uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
           </div>

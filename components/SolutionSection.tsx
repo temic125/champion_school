@@ -72,7 +72,7 @@ const SolutionSection = forwardRef<HTMLElement>((props, ref) => {
       (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
       else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
-    }} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0a0a0a]">
+    }} className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]">
       {/* Subtle glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#20B5C9]/5 rounded-full blur-[150px] pointer-events-none" />
 

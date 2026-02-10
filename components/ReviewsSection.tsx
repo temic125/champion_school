@@ -64,7 +64,7 @@ const ReviewsSection = forwardRef<HTMLElement>((props, ref) => {
       (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
       else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
-    }} id="reviews" className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0a0a0a]">
+    }} id="reviews" className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]">
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[400px] bg-[#20B5C9]/3 rounded-full blur-[200px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

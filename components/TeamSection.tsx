@@ -77,7 +77,7 @@ const TeamSection = forwardRef<HTMLElement>((props, ref) => {
       (sectionRef as React.MutableRefObject<HTMLElement | null>).current = node;
       if (typeof ref === 'function') ref(node);
       else if (ref) (ref as React.MutableRefObject<HTMLElement | null>).current = node;
-    }} id="lecturers" className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0a0a0a]">
+    }} id="lecturers" className="relative section-padding bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a]">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#20B5C9]/3 rounded-full blur-[200px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -106,9 +106,9 @@ const TeamSection = forwardRef<HTMLElement>((props, ref) => {
                 <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#25D366] border-2 border-[#111111]" />
               </div>
 
-              <h3 className="text-lg font-bold text-white mb-1 font-road-radio">{lecturer.name}</h3>
-              <p className="text-sm font-bold mb-2 font-gilroy" style={{ color: lecturer.accentColor }}>{lecturer.experience}</p>
-              <p className="text-white/40 font-gilroy text-xs leading-relaxed">{lecturer.specialty}</p>
+              <h3 className="text-xl font-bold text-white mb-1 font-road-radio">{lecturer.name}</h3>
+              <p className="text-base font-bold mb-2 font-gilroy" style={{ color: lecturer.accentColor }}>{lecturer.experience}</p>
+              <p className="text-white/40 font-gilroy text-sm leading-relaxed">{lecturer.specialty}</p>
             </div>
           ))}
         </div>
