@@ -26,7 +26,7 @@ export default function WhatsAppButton() {
       href="https://wa.me/77771234567" 
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-2xl shadow-[0_0_30px_rgba(37,211,102,0.3)] pulse-ring"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-2xl hover:bg-[#1fb056] pulse-ring"
       aria-label="WhatsApp"
       onMouseEnter={(e) => {
         gsap.to(e.currentTarget, { scale: 1.2, duration: 0.3, ease: 'back.out(1.7)' });

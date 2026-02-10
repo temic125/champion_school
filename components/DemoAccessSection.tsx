@@ -83,7 +83,7 @@ export default function DemoAccessSection({ timeLeft, formatTime, openModal }: D
           <button 
             ref={buttonRef}
             onClick={() => openModal('online')}
-            className="bg-[#fff100] text-[#0a0a0a] px-10 py-5 rounded-[60px] text-lg font-black hover:shadow-[0_0_50px_rgba(255,241,0,0.2)] hover:scale-[1.03] transition-[transform,box-shadow] duration-300 font-road-radio inline-flex items-center gap-2"
+            className="bg-[#fff100] text-[#0a0a0a] px-10 py-5 rounded-[60px] text-lg font-black hover:bg-[#e6dc00] hover:scale-[1.02] transition-all duration-300 font-road-radio inline-flex items-center gap-2"
           >
             <Zap className="w-5 h-5" />
             Получить демо-доступ бесплатно

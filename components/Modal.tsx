@@ -73,7 +73,7 @@ export default function Modal({ showModal, setShowModal, modalType }: ModalProps
           </div>
           <button 
             type="submit"
-            className="w-full bg-[#20B5C9] text-white px-6 py-4 rounded-[60px] text-base font-bold hover:shadow-[0_0_40px_rgba(32,181,201,0.3)] hover:scale-[1.03] transition-[transform,box-shadow] duration-300 font-gilroy mt-2"
+            className="w-full bg-[#20B5C9] text-white px-6 py-4 rounded-[60px] text-base font-bold hover:bg-[#1a9fb0] hover:scale-[1.02] transition-all duration-300 font-gilroy mt-2"
           >
             {modalType === 'offline' ? 'Записаться на консультацию' : 'Получить демо-доступ'}
           </button>

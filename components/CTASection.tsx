@@ -105,7 +105,7 @@ export default function CTASection({ openModal }: CTASectionProps) {
           <button 
             ref={button1Ref}
             onClick={() => openModal('offline')}
-            className="group bg-[#20B5C9] text-white px-8 py-5 rounded-[60px] text-lg font-bold hover:shadow-[0_0_60px_rgba(32,181,201,0.3)] hover:scale-[1.03] transition-[transform,box-shadow] duration-300 font-gilroy inline-flex items-center justify-center gap-3"
+            className="group bg-[#20B5C9] text-white px-8 py-5 rounded-[60px] text-lg font-bold hover:bg-[#1a9fb0] hover:scale-[1.02] transition-all duration-300 font-gilroy inline-flex items-center justify-center gap-3"
           >
             Офлайн → Бесплатная консультация
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -111,7 +111,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ openModal }, re
           </div>
 
           {/* Title */}
-          <h1 ref={titleRef} className="text-5xl md:text-6xl lg:text-8xl font-black text-white mb-8 font-road-radio leading-[0.95] tracking-tight">
+          <h1 ref={titleRef} className="text-5xl md:text-6xl lg:text-[80px] font-black text-white mb-8 font-road-radio leading-[0.95] tracking-tight">
             {t('heroTitle1')}<br />
             <span className="text-[#20B5C9]">{t('heroTitle2')}</span><br />
             <span className="text-white/60">{t('heroTitle3')}</span>
@@ -131,7 +131,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ openModal }, re
               { value: '#1', label: t('industry') },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-xl md:text-2xl font-black text-[#20B5C9] font-road-radio">{stat.value}</div>
+                <div className="text-lg md:text-xl font-black text-[#20B5C9] font-road-radio">{stat.value}</div>
                 <div className="text-xs md:text-sm text-white/40 font-gilroy mt-1 uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
@@ -142,7 +142,7 @@ const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ openModal }, re
             <button 
               ref={button1Ref}
               onClick={() => openModal('offline')}
-              className="group relative bg-[#20B5C9] text-white px-8 py-5 rounded-[60px] text-lg font-bold transition-colors shadow-[0_0_40px_rgba(32,181,201,0.1)] hover:shadow-[0_0_60px_rgba(32,181,201,0.2)] font-gilroy flex items-center justify-center gap-3"
+              className="group relative bg-[#20B5C9] text-white px-8 py-5 rounded-[60px] text-lg font-bold hover:bg-[#1a9fb0] hover:scale-[1.02] transition-all duration-300 font-gilroy flex items-center justify-center gap-3"
             >
               <MapPin className="h-5 w-5" />
               {t('wantOffline')}
